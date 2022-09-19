@@ -3,11 +3,14 @@ const bookTitle = document.querySelector('.name');
 const bookAuthor = document.querySelector('.author');
 const bookContainer = document.querySelector('.bookContainer');
 
+let counter = 0;
 let books = [];
 
-function AddBook( title, author){
+function AddBook( bookId, title, author){
+    this.id = bookId;
     this.title = title;
     this.author = author;
+    counter ++;
 }
 
 function displayBook() {
@@ -28,9 +31,19 @@ function displayBook() {
 
 addBtn.addEventListener('click', () =>{
 
-    const newBook = new AddBook(bookTitle.value, bookAuthor.value);
+    const newBook = new AddBook(counter ,bookTitle.value, bookAuthor.value);
     books.push(newBook);
     displayBook();
     console.log(books);
+    console.log(counter);
 })
+
+if(counter > 0){
+    const rmvButton = document.querySelector('.removeButton');
+
+    rmvButton.addEventListener('click', (index)=>{
+        console.log("Hello");
+    }); 
+}
+
 
