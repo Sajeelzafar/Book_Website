@@ -7,10 +7,12 @@ const rmvButton = document.querySelector('.removeButton');
 let counter = 0;
 let books = [];
 
-function AddBook( title, author){
+function AddBook(count, title, author){
+    this.id = count;
     this.title = title;
     this.author = author;
     counter++;
+    console.log("type is ",typeof this.id, "and its value is", this.id, "while counter is", counter);
     return;
 }
 
@@ -41,13 +43,20 @@ function printBook(newBook){
 
 
 addBtn.addEventListener('click', () =>{
-    const newBook = new AddBook(bookTitle.value, bookAuthor.value);
+    const newBook = new AddBook(counter, bookTitle.value, bookAuthor.value);
     books.push(newBook);
+    console.log(books);
     printBook(books);
 })
 
 function removefunction(removeIndex){
-    books.splice(removeIndex, 1);
+    books.splice(removeIndex-1, 1);
+    for(let i = removeIndex-1; i < books.length; i++){
+        books[i].id--;
+    }
+    counter--;
+    console.log("type of ID is: ", typeof removeIndex, removeIndex);
+    console.log(books);
 }
     
 
