@@ -25,9 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
               <p>${book.author} </p>`;
 
     div.appendChild(textContainer);
+    div.appendChild(textContainer);
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('buttonContainer');
+    div.appendChild(buttonContainer);
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
-    div.appendChild(removeButton);
+    buttonContainer.appendChild(removeButton);
   });
 });
 
@@ -50,9 +54,12 @@ function printBook() {
             <p>${bookAuthor.value} </p>`;
 
   div.appendChild(textContainer);
+  const buttonContainer = document.createElement('div');
+  buttonContainer.classList.add('buttonContainer');
+  div.appendChild(buttonContainer);
   const removeButton = document.createElement('button');
   removeButton.innerText = 'Remove';
-  div.appendChild(removeButton);
+  buttonContainer.appendChild(removeButton);
   const divider = document.createElement('hr');
   div.appendChild(divider);
 }
@@ -101,9 +108,10 @@ addBtn.addEventListener('click', () => {
 function deleteFromDom(e) {
   const item = e.target;
   const parent = item.parentElement;
+  const grandparent = parent.parentElement;
 
-  parent.remove();
-  deleteInStorage(parent);
+  grandparent.remove();
+  deleteInStorage(grandparent);
 }
 
 bookContainer.addEventListener('click', deleteFromDom);
