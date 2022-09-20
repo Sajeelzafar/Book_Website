@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   arrBooks.forEach((book) => {
     const div = document.createElement('div');
-    div.classList.add('bookbox');
+    div.classList.add('bookBox');
     bookContainer.appendChild(div);
     const textContainer = document.createElement('div');
     textContainer.classList.add('bookText');
@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
     div.appendChild(removeButton);
-    const divider = document.createElement('hr');
-    div.appendChild(divider);
   });
 });
 
@@ -42,7 +40,7 @@ function AddBook(title, author) {
 // PRINT BOOK ON TOP
 function printBook() {
   const div = document.createElement('div');
-  div.classList.add('bookbox');
+  div.classList.add('bookBox');
   bookContainer.appendChild(div);
   const textContainer = document.createElement('div');
   textContainer.classList.add('bookText');
@@ -93,7 +91,7 @@ addBtn.addEventListener('click', () => {
     const newBook = new AddBook(bookTitle.value, bookAuthor.value);
     saveToLocal(newBook);
     printBook();
-  } else { 
+  } else {
     document.querySelector('.error').innerText = 'Please Enter a the Title and the Author';
     document.querySelector('.error').style.display = 'flex';
   }
