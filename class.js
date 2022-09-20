@@ -1,7 +1,3 @@
-/*If you separated the code in multiple files and you you have the following issues with the linter: 
-complaining about having multiple classes at the same file, or AN UNUSED VARIABLE, disable the linter check 
-for that rule in the file with a /* eslint-disable class-methods-use-this.*/
-
 const addBtn = document.querySelector('.addButton');
 const bookTitle = document.querySelector('.name');
 const bookAuthor = document.querySelector('.author');
@@ -30,7 +26,7 @@ class Book {
     div.appendChild(removeButton);
   }
 
-  saveToLocal(book) {
+  saveToLocal = (book) => {
     let arrBooks;
 
     if (localStorage.getItem('books') === null) {
@@ -42,7 +38,7 @@ class Book {
     localStorage.setItem('books', JSON.stringify(arrBooks));
   }
 
-    deleteInStorage(book) {
+  deleteInStorage = (book) => {
     let arrBooks;
 
     if (localStorage.getItem('books') === null) {
