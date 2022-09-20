@@ -43,15 +43,33 @@ class Book {
         localStorage.setItem('books', JSON.stringify(arrBooks));
       }
 
+      deleteInStorage(book) {
+        let arrBooks;
+      
+        if (localStorage.getItem('books') === null) {
+          arrBooks = [];
+        } else {
+          arrBooks = JSON.parse(localStorage.getItem('books'));
+        }
+        console.log(book)
+        const elementText = book.children[0].innerText;
+        
+        const spliceBook = arrBooks.map((element) => element.title).indexOf(elementText);
+        arrBooks.splice(spliceBook, 1);
+        localStorage.setItem('books', JSON.stringify(arrBooks));
+      }
+
       deleteFromDom(e) {
         const item = e.target;
         const parent = item.parentElement;
       
         if (e.target.nodeName === 'BUTTON') {
           parent.remove();
-        //   deleteInStorage(parent);
+          this.deleteInStorage(parent);
         }
       }
+
+  
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -96,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
-  // DELETE ELEMENT FROM DOM
+
   document.querySelectorAll('input').forEach((input) => {
     input.addEventListener('focus', () => {
       document.querySelector('.error').style.display = 'none';

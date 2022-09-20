@@ -105,7 +105,8 @@ function deleteFromDom(e) {
 
   if (e.target.nodeName === 'BUTTON') {
     parent.remove();
-    deleteInStorage(parent);
+    console.log(e.target.parentElement);
+    // deleteInStorage(parent);
   }
 }
 
