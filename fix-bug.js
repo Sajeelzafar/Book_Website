@@ -106,7 +106,7 @@ function deleteFromDom(e) {
   if (e.target.nodeName === 'BUTTON') {
     parent.remove();
     deleteInStorage(parent);
-  };
+  }
 }
 
 document.querySelectorAll('input').forEach((input) => {
