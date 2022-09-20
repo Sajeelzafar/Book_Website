@@ -25,10 +25,6 @@ class Book {
         const removeButton = document.createElement('button');
         removeButton.innerText = 'Remove';
         div.appendChild(removeButton);
-        bookContainer.addEventListener('click', function (e) {
-            const newBook = new Book(bookTitle.value, bookAuthor.value);
-            newBook.deleteFromDom(e);
-          });
       }
 
       saveToLocal(book) {
@@ -52,7 +48,7 @@ class Book {
           arrBooks = JSON.parse(localStorage.getItem('books'));
         }
         console.log(book)
-        const elementText = book.children[0].innerText;
+        const elementText = book.innerText;
         
         const spliceBook = arrBooks.map((element) => element.title).indexOf(elementText);
         arrBooks.splice(spliceBook, 1);
@@ -96,11 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const removeButton = document.createElement('button');
       removeButton.innerText = 'Remove';
       div.appendChild(removeButton);
-      bookContainer.addEventListener('click', function (e) {
+    });
+    bookContainer.addEventListener('click', function (e) {
         const newBook = new Book(bookTitle.value, bookAuthor.value);
         newBook.deleteFromDom(e);
       });
-    });
   });
 
   addBtn.addEventListener('click', () => {
