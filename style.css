@@ -1,0 +1,140 @@
+/* ........... Css Resets .......... */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.5rem;
+  background: linear-gradient(to right, rgba(251, 255, 0, 0.748), rgb(191, 119, 43) 60%);
+}
+
+/* .......... Reusable classes and other components ........... */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(4, 4, 4);
+  font-size: 1.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* Home Page */
+
+.container {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.content {
+  padding: 2rem;
+  min-height: 50%;
+  width: 70%;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.114);
+  backdrop-filter: blur(120px);
+  box-shadow: 4px 10px 10px rgba(0, 0, 0, 0.251), -4px 10px 10px rgba(0, 0, 0, 0.464);
+}
+
+.form {
+  width: 100%;
+  gap: 0.5rem;
+  position: relative !important;
+}
+
+.form input[type="text"] {
+  border: none;
+  padding: 1rem;
+  background-color: black;
+  color: #fff;
+  width: 90%;
+  margin: auto;
+  transition: width 200ms ease-in-out;
+  z-index: 1;
+}
+
+.form input[type="text"]::placeholder {
+  transition: left 900ms ease-in-out;
+}
+
+.form input[type="text"]:focus::placeholder {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+}
+
+.form input[type="text"]:focus {
+  width: 100%;
+  outline: 2px solid rgb(191, 139, 43);
+}
+
+.error {
+  display: none;
+  background-color: rgb(235, 163, 163);
+  color: rgb(53, 1, 1);
+  width: 90%;
+  margin: auto;
+  padding: 0.5rem;
+}
+
+.addButton {
+  margin: 0 auto;
+  transition: all 150ms ease-in-out;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.504);
+  border-radius: 1px;
+}
+
+.addButton:hover {
+  background-color: rgba(251, 255, 0, 0.748);
+}
+
+header h1 {
+  margin-bottom: 2rem;
+}
+
+.bookText,
+.bookBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  gap: 0.5rem;
+}
