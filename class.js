@@ -47,9 +47,7 @@ class Book {
         } else {
           arrBooks = JSON.parse(localStorage.getItem('books'));
         }
-        console.log(book)
-        const elementText = book.innerText;
-        
+        const elementText = book.children[0].children[0].innerText;
         const spliceBook = arrBooks.map((element) => element.title).indexOf(elementText);
         arrBooks.splice(spliceBook, 1);
         localStorage.setItem('books', JSON.stringify(arrBooks));
@@ -61,6 +59,7 @@ class Book {
       
         if (e.target.nodeName === 'BUTTON') {
           parent.remove();
+          // console.log(parent)
           this.deleteInStorage(parent);
         }
       }
