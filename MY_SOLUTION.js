@@ -93,6 +93,9 @@ addBtn.addEventListener('click', () => {
     const newBook = new AddBook(bookTitle.value, bookAuthor.value);
     saveToLocal(newBook);
     printBook();
+  } else { 
+    document.querySelector('.error').innerText = 'Please Enter a the Title and the Author';
+    document.querySelector('.error').style.display = 'flex';
   }
 });
 
@@ -106,3 +109,8 @@ function deleteFromDom(e) {
 }
 
 bookContainer.addEventListener('click', deleteFromDom);
+document.querySelectorAll('input').forEach((input) => {
+  input.addEventListener('focus', () => {
+    document.querySelector('.error').style.display = 'none';
+  });
+});

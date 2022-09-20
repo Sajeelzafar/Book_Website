@@ -4,19 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Awesome Books</title>
   </head>
   <body>
-    <header class="title">
-      <h1 class="main-heading">Awesome Books</h1>
-    </header>
-    <div class="bookContainer"></div>
-    <form class="form">
-      <input class="name" type="text" placeholder="Title" required />
-      <input class="author" type="text" placeholder="Author" required />
-      <button class="addButton" type="button">Add</button>
-    </form>
+    <div class="container flex flex-col flex-center">
+      <div class="content flex flex-col flex-center">
+        <header class="title">
+          <h1 class="main-heading">Awesome Books</h1>
+        </header>
+        <div class="bookContainer"></div>
+        <form class="form flex flex-col">
+          <input class="name" type="text" placeholder="Title" required />
+          <input class="author" type="text" placeholder="Author" required />
+          <span class="error"></span>
+          <button class="addButton" type="button">Add</button>
+        </form>
+      </div>
+    </div>
 
-    <script src="main.js"></script>
+    <script src="MY_SOLUTION.js"></script>
   </body>
 </html>
