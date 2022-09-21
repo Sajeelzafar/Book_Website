@@ -22,6 +22,7 @@ class Book {
 
     div.appendChild(textContainer);
     const removeButton = document.createElement('button');
+    removeButton.classList.add('remove-btn');
     removeButton.innerText = 'Remove';
     div.appendChild(removeButton);
   }
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     div.appendChild(textContainer);
     const removeButton = document.createElement('button');
+    removeButton.classList.add('remove-btn');
     removeButton.innerText = 'Remove';
     div.appendChild(removeButton);
   });
