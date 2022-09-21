@@ -12,7 +12,11 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://sajeelzafar.github.io/Book_Website/)
+[**See Project 🚀**](https://sajeelzafar.github.io/Book_Website/)
+
+## Screenshot
+
+![Desktop Design](./preview/screenshot.png)
 
 ## Getting Started
 
@@ -30,13 +34,18 @@ To run this project one must have Visual Studio (VS) Code installed and running.
 
 Clone and access the repository using the following commands on Git Bash:
 
-- git clone git@github.com:Sajeelzafar/Book_Website.git
-- cd Book_Website
+  ```
+   cd PATH 
+   git clone _https://github.com/Sajeelzafar/Book_Website.git_
+   cd _awesome-books_
+  _index.html_ 
+  ```
 
 Open the directory in visual studio code by typing the following command in Git Bash:
 
-- code .
-
+ ```
+ code .
+  ```
 Then using the live server of VS Code you can view the page.
 
 ## Authors
@@ -49,9 +58,9 @@ Then using the live server of VS Code you can view the page.
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Dave Zag](https://github.com/DaveZag)
+- Twitter: [@Dave Zagabe](https://twitter.com/davezagabe2)
+- LinkedIn: [@Dave Zagabe](https://www.linkedin.com/in/dave-zagabe-03597a247/)
 
 ## 🤝 Contributing
 
