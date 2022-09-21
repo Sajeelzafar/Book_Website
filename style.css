@@ -148,7 +148,6 @@ header h1 {
 }
 
 .navbar {
-  border: 2px solid red;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -192,4 +191,43 @@ header h1 {
 .navrightsideListitemLast {
   margin: 0.25rem;
   padding: 0.75rem 0 0.75rem 0.75rem;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.time {
+  position: fixed;
+  top: 10%;
+  font-size: 1.2rem;
+  right: 15%;
+}
+
+.heading {
+  padding-right: 5%;
+  line-height: 3rem;
+}
+
+.contact-heading {
+  font-size: 3rem;
+}
+
+.contactInformation {
+  padding: 5%;
+  font-size: 1.2rem;
+}
+
+.contactlist {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  width: 100%;
+  padding-top: 5%;
+  line-height: 2rem;
 }
