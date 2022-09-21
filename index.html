@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Awesome Books</title>
   </head>
@@ -18,14 +19,16 @@
 
       <header class="header flex flex-jc-sb flex-al-c limit">
         <a href="index.html" class="logo flex flex-al-c">
-          <div class="logo-img"><img src="images/book.png" alt="image of a book" /></div>
+          <div class="logo-img">
+            <img src="images/book.png" alt="image of a book" />
+          </div>
           <p class="logo-text">Awesome <span>Books</span></p>
         </a>
         <nav class="navbar">
           <ul class="nav-links flex">
-            <li><a class="nav-link" href="">List</a></li>
-            <li><a class="nav-link" href="">Add New</a></li>
-            <li><a class="nav-link" href="">Contact</a></li>
+            <li><a id="book-list" class="nav-link" href="#1">List</a></li>
+            <li><a id="add-book" class="nav-link" href="#2">Add New</a></li>
+            <li><a id="contact" class="nav-link" href="#3">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -34,7 +37,7 @@
         <div class="time"></div>
         <!-- ================= Book-List Section ================= -->
 
-        <section class="book-list content flex flex-col flex-center">
+        <section id="1" class="book-list content flex-col flex-center">
           <header class="list-title">
             <h1 class="list-heading">All Awesome Books</h1>
           </header>
@@ -43,7 +46,7 @@
 
         <!-- ================= Add-Book Section ================= -->
 
-        <section class="add-book content flex flex-col flex-center">
+        <section id="2" class="add-book content flex-col flex-center">
           <header class="title">
             <h1 class="main-heading">Add a new Book</h1>
           </header>
@@ -56,15 +59,14 @@
         </section>
 
         <!-- ================= Contact Section ================= -->
-        <section class="contact content flex flex-col flex-center">
-          <div class="time"></div>
+        <section id="3" class="contact content flex-col flex-center">
           <div class="heading">
             <h1 class="contact-heading">Contact Information</h1>
           </div>
           <div class="contactInformation">
             <p class="contacttext">
-              If you have any questions or want to contact us to design a similar website,
-              you may approach us through any of the following:
+              If you have any questions or want to contact us to design a
+              similar website, you may approach us through any of the following:
             </p>
             <ul class="contactlist">
               <li class="contactlistitem">
@@ -101,11 +103,17 @@
               <li class="contactlistitem">
                 Our GitHub profiles:
                 <span
-                  ><a href="https://github.com/Sajeelzafar" target="_blank" rel="noopener"
+                  ><a
+                    href="https://github.com/Sajeelzafar"
+                    target="_blank"
+                    rel="noopener"
                     >@sajeel zafar</a
                   >
                   ,
-                  <a href="https://github.com/DaveZag" target="_blank" rel="noopener"
+                  <a
+                    href="https://github.com/DaveZag"
+                    target="_blank"
+                    rel="noopener"
                     >@Dave Zagabe</a
                   ></span
                 >

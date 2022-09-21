@@ -1,11 +1,11 @@
-let time = document.querySelector(".time");
+const time = document.querySelector('.time');
 
-let date = new Date();
+const date = new Date();
 
-time.innerHTML = date.toLocaleDateString() + ", " + date.toLocaleTimeString();
+time.innerHTML = `${date.toLocaleDateString()}, ${date.toLocaleTimeString()}`;
 
 setInterval(() => {
-    let time = document.querySelector(".time");
-    let date = new Date();
-    time.innerHTML = date.toLocaleDateString() + ", " + date.toLocaleTimeString();
+  const time = document.querySelector('.time');
+  const date = new Date();
+  time.innerHTML = `${date.toLocaleDateString()}, ${date.toLocaleTimeString()}`;
 }, 1000);

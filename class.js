@@ -2,6 +2,12 @@ const addBtn = document.querySelector('.addButton');
 const bookTitle = document.querySelector('.name');
 const bookAuthor = document.querySelector('.author');
 const bookContainer = document.querySelector('.bookContainer');
+const bookList = document.getElementById('book-list');
+const addBook = document.getElementById('add-book');
+const contact = document.getElementById('contact');
+const bookListSection = document.getElementsByClassName('book-list');
+const addBookSection = document.getElementsByClassName('add-book');
+const contactList = document.getElementsByClassName('contact');
 
 class Book {
   constructor(title, author) {
@@ -111,4 +117,28 @@ document.querySelectorAll('input').forEach((input) => {
   input.addEventListener('focus', () => {
     document.querySelector('.error').style.display = 'none';
   });
+});
+
+bookList.addEventListener('click', () => {
+  for (let i = 0; i < bookListSection.length; i += 1) {
+    bookListSection[i].style.display = 'flex';
+    addBookSection[i].style.display = 'none';
+    contactList[i].style.display = 'none';
+  }
+});
+
+addBook.addEventListener('click', () => {
+  for (let i = 0; i < addBookSection.length; i += 1) {
+    bookListSection[i].style.display = 'none';
+    addBookSection[i].style.display = 'flex';
+    contactList[i].style.display = 'none';
+  }
+});
+
+contact.addEventListener('click', () => {
+  for (let i = 0; i < contactList.length; i += 1) {
+    bookListSection[i].style.display = 'none';
+    addBookSection[i].style.display = 'none';
+    contactList[i].style.display = 'flex';
+  }
 });
